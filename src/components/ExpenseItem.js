@@ -2,7 +2,7 @@ import "./ExpenseItem.css";
 
 function ExpenseItem({title, amount, date}) {
   const month = date.toLocaleString("en-US", { month: "long" });
-  const year = date.getFullYear();
+  const year = date.toLocaleString("en-US", { year: "numeric" });
   const day = date.toLocaleString("en-US", { day: "2-digit" });
 
   return (
