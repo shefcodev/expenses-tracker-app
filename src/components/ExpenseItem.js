@@ -1,23 +1,17 @@
+import ExpenseDate from "./ExpenseDate";
+import Card from "./Card";
 import "./ExpenseItem.css";
 
-function ExpenseItem({title, amount, date}) {
-  const month = date.toLocaleString("en-US", { month: "long" });
-  const year = date.toLocaleString("en-US", { year: "numeric" });
-  const day = date.toLocaleString("en-US", { day: "2-digit" });
-
+function ExpenseItem({ title, amount, date }) {
   return (
-    <div className="expense-item">
-      <div>
-        <div>{month}</div>
-        <div>{year}</div>
-        <div>{day}</div>
-      </div>
+    <Card className="expense-item">
+      <ExpenseDate date={date} />
       <div className="expense-item__description">
         <h2>{title}</h2>
         <div className="expense-item__price">${amount}</div>
       </div>
-    </div>
+    </Card>
   );
-} 
+}
 
 export default ExpenseItem;
