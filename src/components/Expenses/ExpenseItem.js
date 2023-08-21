@@ -5,6 +5,7 @@ import "./ExpenseItem.css";
 
 const ExpenseItem = ({ title, amount, date }) => {
   const [getTitle, setTitle] = useState(title);
+  console.log("ExpenseItem evaluated by React");
 
   const clickHandler = () => {
     setTitle("No Expense");
@@ -18,9 +19,9 @@ const ExpenseItem = ({ title, amount, date }) => {
         <h2>{getTitle}</h2>
         <div className="expense-item__price">${amount}</div>
       </div>
-      <button onClick = {clickHandler}>Change Title</button>
+      <button onClick={clickHandler}>Change Title</button>
     </Card>
   );
-}
+};
 
 export default ExpenseItem;
