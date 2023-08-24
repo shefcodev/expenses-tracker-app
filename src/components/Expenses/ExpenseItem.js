@@ -5,7 +5,7 @@ import "./ExpenseItem.css";
 
 const ExpenseItem = ({ title, amount, date }) => {
   const [getTitle, setTitle] = useState(title);
-  console.log("ExpenseItem evaluated by React");
+  // console.log("ExpenseItem evaluated by React");
 
   const clickHandler = () => {
     setTitle("No Expense");
