@@ -6,18 +6,7 @@ import "./Expenses.css";
 
 const Expenses = ({ expenses }) => {
   const [filteredYear, setFilteredYear] = useState("2020");
-  let filterInfoText = "2019, 2021, & 2022";
-
-  if (filteredYear === "2019") {
-    filterInfoText = "2020, 2021, & 2022";
-  } else if (filteredYear === "2020") {
-    filterInfoText = "2019, 2021, & 2022";
-  } else if (filteredYear === "2021") {
-    filterInfoText = "2019, 2020, & 2022";
-  } else if (filteredYear === "2022") {
-    filterInfoText = "2019, 2020, & 2021";
-  }
-
+  
   const filterChangeHandler = (selectedYear) => {
     setFilteredYear(selectedYear);
   };
@@ -28,12 +17,11 @@ const Expenses = ({ expenses }) => {
         selected={filteredYear}
         onChangeFilter={filterChangeHandler}
       />
-      <p>Data for years {filterInfoText} is hidden</p>
 
       <ExpenseItem
         title={expenses[0].title}
         amount={expenses[0].amount}
-        date={expenses[0].date}
+        date={expenses[0].date} 
       />
       <ExpenseItem
         title={expenses[1].title}
