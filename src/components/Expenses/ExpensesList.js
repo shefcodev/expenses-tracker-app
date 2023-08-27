@@ -15,7 +15,7 @@ const ExpensesList = ({ filteredExpenses }) => {
       ))}
     </ul>
   ) : (
-    <h1 className='expenses-list__fallback'>No Expenses Found.</h1>
+    <h2 className='expenses-list__fallback'>No Expenses Found.</h2>
   );
 };
 
