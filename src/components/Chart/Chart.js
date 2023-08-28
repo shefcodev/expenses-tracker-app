@@ -2,15 +2,15 @@ import React from 'react';
 import ChartBar from './ChartBar';
 import './Chart.css';
 
-const Chart = ({ dataArr }) => {
+const Chart = ({ configData }) => {
   return (
     <div className='chart'>
-      {dataArr.map((configData) => (
+      {configData.map((data) => (
         <ChartBar
-          key={configData.id}
-          value={configData.value}
+          key={data.label}
+          value={data.value}
           maxValue={null}
-          labal={configData.label}
+          label={data.label}
         />
       ))}
     </div>
